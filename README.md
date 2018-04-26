@@ -1,2 +1,6 @@
-# DatAsana
-D3.js based tool showing each Asana benefits
+# DatAsana  
+
+## Requirements   
+### Python script to parse data  
+- Python 3.6
+- BeautifulSoup 4.4.6
