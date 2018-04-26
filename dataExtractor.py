@@ -18,11 +18,13 @@ BENEFITURL = 'https://www.yogajournal.com/poses/yoga-by-benefit'
 
 
 # url : url to be parsed
-def htmlparser(url):
+# parenthtml : parent element of the content to be extracted
+# parentclass : the css class of the parent
+def htmlparser(url, parenthtml, parentclass):
     html = urllib.request.urlopen(url, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
-    parent = soup.find('section', {'class': 'm-card-group'})
+    parent = soup.find(parenthtml, {'class': parentclass})
     print(parent)
 
 
-htmlparser(TYPEURL)
+htmlparser(TYPEURL, 'section', 'm-card-group')
