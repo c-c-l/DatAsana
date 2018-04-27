@@ -14,8 +14,8 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 # Constant variables
-TYPEURL = 'https://www.yogajournal.com/poses/types'
-BENEFITURL = 'https://www.yogajournal.com/poses/yoga-by-benefit'
+TYPE_URL = 'https://www.yogajournal.com/poses/types'
+BENEFIT_URL = 'https://www.yogajournal.com/poses/yoga-by-benefit'
 
 
 # url : url to be parsed
@@ -23,18 +23,18 @@ BENEFITURL = 'https://www.yogajournal.com/poses/yoga-by-benefit'
 # containerclass : css class of container
 # parenthtml : parent element of the content to be extracted
 # parentclass : css class of parent
-def htmlparser(url, containerhtml, containerclass, parenthtml, parentclass):
+def html_parser(url, container_html, container_class, parent_html, parent_class):
     html = urllib.request.urlopen(url, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
-    container = soup.find(containerhtml, {'class': containerclass})
+    container = soup.find(container_html, {'class': container_class})
     # print(container)
-    parents = container.findChildren(parenthtml, {'class': parentclass})
+    parents = container.findChildren(parent_html, {'class': parent_class})
     #print(parents)
     for article in parents:
         titles = article.findChildren('h2')
         for h2 in titles :
-            titletext = h2.getText()
-            print(titletext)
+            title_text = h2.getText()
+            print(title_text)
 
 # Get types
-htmlparser(TYPEURL, 'section', 'm-card-group-container', 'article', 'm-card')
+html_parser(TYPEURL, 'section', 'm-card-group-container', 'article', 'm-card')
