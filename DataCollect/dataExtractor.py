@@ -37,4 +37,4 @@ def html_parser(url, container_html, container_class, parent_html, parent_class)
             print(title_text)
 
 # Get types
-html_parser(TYPEURL, 'section', 'm-card-group-container', 'article', 'm-card')
+html_parser(TYPE_URL, 'section', 'm-card-group-container', 'article', 'm-card')
