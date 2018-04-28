@@ -43,6 +43,8 @@ def html_parser(url, container_html, container_class, parent_html, parent_class,
             titles = article.findChildren(data, {data_spec : data_val})
             for title in titles :
                 title_text = title.getText()
+                if (title_text.find(' Yoga Poses') != -1) :
+                    title_text = title_text.replace(' Yoga Poses', '/')
                 list.append(title_text)
     return list
 
@@ -52,10 +54,13 @@ sanskrit_poses = html_parser(POSE_URL, 'div', 'm-table', 'tr', '', 'td','data-co
 # Get English Name
 english_poses = html_parser(POSE_URL, 'div', 'm-table', 'tr', '', 'td','data-col', 'English Name')
 
+# Get Type of pose (NOTE : Multiple val are separated with slash)
+type_poses = html_parser(POSE_URL, 'div', 'm-table', 'tr', '', 'td','data-col', 'Pose Type')
+
 # Create list of tuples that store Sanskrit name and English name in each tuple
 list_sanskrit_english = []
 for pose_index in range(0, len(sanskrit_poses)):
-    tuple = list_sanskrit_english.append([sanskrit_poses[pose_index], english_poses[pose_index]])
+    tuple = list_sanskrit_english.append([sanskrit_poses[pose_index], english_poses[pose_index], type_poses[pose_index]])
     pose_index = pose_index + 1
 
 # Create data set as csv file
