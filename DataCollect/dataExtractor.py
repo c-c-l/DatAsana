@@ -5,7 +5,6 @@
 import csv
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
-from bs4 import SoupStrainer
 import ssl
 
 # Ignore SSL certificate errors
@@ -25,22 +24,20 @@ BENEFIT_URL = 'https://www.yogajournal.com/poses/yoga-by-benefit'
 # parent_html : parent element of the content to be extracted
 # parent_class : css class of parent
 # data : data to parse
-# data_spec : data additional info (optional)
+# data_spec : data additional info (opt)
 # data_val : value to additional info (opt)
 def html_parser(url, container_html, container_class, parent_html, parent_class, data, data_spec = None, data_val = None):
     html = urllib.request.urlopen(url, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
     container = soup.find(container_html, {'class': container_class})
-    # print(container)
     parents = container.findChildren(parent_html, {'class': parent_class})
     list = []
-    #print(parents)
     if (data_spec == None) :
         for article in parents:
             titles = article.findChildren(data)
             for title in titles :
                 title_text = title.getText()
-                list.append(title_text)
+                list.append(title_text,)
     else :
         for article in parents :
             titles = article.findChildren(data, {data_spec : data_val})
@@ -51,10 +48,19 @@ def html_parser(url, container_html, container_class, parent_html, parent_class,
 
 # Get Sanskrit Name
 sanskrit_poses = html_parser(POSE_URL, 'div', 'm-table', 'tr', '', 'td','data-col', 'Sanskrit Name')
-print(sanskrit_poses)
 
 # Get English Name
 english_poses = html_parser(POSE_URL, 'div', 'm-table', 'tr', '', 'td','data-col', 'English Name')
-print(english_poses)
 
-# html_parser(TYPE_URL, 'section', 'm-card-group-container', 'article', 'm-card', 'h2')
+# Create list of tuples that store Sanskrit name and English name in each tuple
+list_sanskrit_english = []
+for pose_index in range(0, len(sanskrit_poses)):
+    tuple = list_sanskrit_english.append([sanskrit_poses[pose_index], english_poses[pose_index]])
+    pose_index = pose_index + 1
+
+# Create data set as csv file
+csv_file = 'yoga_data.csv'
+with open (csv_file, 'w', newline='') as newFile:
+    writer = csv.writer(newFile, delimiter=',')
+    for row in list_sanskrit_english :
+        writer.writerow(row)
