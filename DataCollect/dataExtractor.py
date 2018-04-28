@@ -97,7 +97,7 @@ for pose_index in range(0, len(sanskrit_poses)):
 
 # Create data set as csv file
 csv_file = 'yoga_data.csv'
-with open (csv_file, 'w', newline='') as newFile:
+with open (csv_file, 'w', newline='', encoding='utf-8') as newFile:
     writer = csv.writer(newFile, delimiter=',')
     for row in list_sanskrit_english :
         writer.writerow(row)
