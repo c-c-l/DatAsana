@@ -20,6 +20,7 @@ Data structure is defined by the following rules :
 ## Sources 
 [Yoga poses and info](https://www.yogajournal.com)  
 
+## Other  
 Feel free to use the yoga dataset I created :)  
 
 Python code to extract dataset can be optimized, I did not think of any algo that can accelerate the extraction of the data since I only needed to do it once but any suggestions are welcomed anyway :D  
