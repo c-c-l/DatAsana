@@ -76,24 +76,36 @@ type_poses = html_parser(POSE_URL, 'div', 'm-table', 'tr', '', 'td','data-col', 
 # Benefits
 # Get title for benefits
 benefits = html_parser(BENEFIT_URL, 'section', 'm-card-group-container', 'article', 'm-card', 'h2')
-print(benefits)
+
 # Get links for benefits
 benefit_link=get_link(BENEFIT_URL, 'section', 'm-card-group-container', 'article', 'm-card', "a")
 print(benefit_link)
 
+# Remove duplicates because each section contains 'a' tag
+tmplist = []
+for benefit in benefit_link:
+    if benefit not in tmplist:
+        tmplist.append(benefit)
+benefit_link = tmplist
+
+
 # Create a list for each benefits with name and link
 list_benef = []
-print(type(list_benef))
 for b_index in range(0, len(benefits)):
     t_bene = list_benef.append([benefits[b_index],benefit_link[b_index]])
     b_index = b_index + 1
-print(list_benef)
 
 # Create list of tuples that store Sanskrit name and English name in each tuple
 list_sanskrit_english = []
 for pose_index in range(0, len(sanskrit_poses)):
     tuple = list_sanskrit_english.append([sanskrit_poses[pose_index], english_poses[pose_index], type_poses[pose_index]])
     pose_index = pose_index + 1
+
+# Create list for each benefit with poses names (sanskrit)
+for link in range(0, len(list_benef)):
+    current_element = list_benef[link]
+    print(current_element)
+    link = link + 1
 
 # Create data set as csv file
 csv_file = 'yoga_data.csv'
