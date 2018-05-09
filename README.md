@@ -19,6 +19,7 @@ Data structure is defined by the following rules :
 
 ## Sources 
 [Yoga poses and info](https://www.yogajournal.com)  
+[Chord Diagram based](http://bl.ocks.org/farazshuja/6225ffc34c23ade0de169c4d96252bbe)  
 
 ## Other  
 Feel free to use the yoga dataset I created :)  
