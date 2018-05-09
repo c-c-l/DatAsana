@@ -14,8 +14,8 @@ Savasana,Corpse Pose,"Restorative,","['Calm', 'Depression', 'Fatigue', 'Headache
 Gomukhasana,Cow Face Pose,"Hip Opening,Seated,",['Flexibility']
 Bitilasana,Cow Pose,"Chest Opening,Yoga Backbends","['Anxiety', 'Asthma', 'Back Pain', 'Insomnia', 'Neck Pain']"
 Bakasana,Crane (Crow) Pose,"Arm Balance,Core,",[]
-,Dolphin Plank Pose,"Arm Balance,Core,Strengthening,","['Depression', 'Fitness', 'Osteoporosis', 'Stress']"
-,Dolphin Pose,"Core,Standing,Strengthening,","['Asthma', 'Back Pain', 'Depression', 'Fatigue', 'Fitness', 'Flat Feet', 'Headaches', 'High Blood Pressure', 'Insomnia', 'Menopause', 'Menstruation', 'Osteoporosis', 'Sciatica']"
+Makara Adho Mukha Svanasana,Dolphin Plank Pose,"Arm Balance,Core,Strengthening,","['Depression', 'Fitness', 'Osteoporosis', 'Stress']"
+Ardha Pincha Mayurasana,Dolphin Pose,"Core,Standing,Strengthening,","['Asthma', 'Back Pain', 'Depression', 'Fatigue', 'Fitness', 'Flat Feet', 'Headaches', 'High Blood Pressure', 'Insomnia', 'Menopause', 'Menstruation', 'Osteoporosis', 'Sciatica']"
 Adho Mukha Svanasana,Downward-Facing Dog,"Forward Bend,Standing,Strengthening,","['Asthma', 'Back Pain', 'Digestion', 'Energy', 'Fatigue', 'Flat Feet', 'Flexibility', 'Headaches', 'High Blood Pressure', 'Insomnia', 'Menopause', 'Menstruation', 'Osteoporosis', 'Sciatica', 'Sinusitis']"
 Garudasana,Eagle Pose,"Balancing,Hip Opening,Standing,","['Asthma', 'Back Pain', 'Sciatica']"
 Sukhasana,Easy Pose,"Hip Opening,Seated,","['Anxiety', 'Asthma', 'Calm', 'Depression', 'Insomnia', 'Pregnancy', 'Sciatica']"
@@ -39,8 +39,8 @@ Ananda Balasana ,Happy Baby Pose,"Core,","['Fatigue', 'Stress']"
 Janu Sirsasana,Head-to-Knee Forward Bend,"Forward Bend,Seated,","['Anxiety', 'Calm', 'Digestion', 'Fatigue', 'Flexibility', 'Headaches', 'High Blood Pressure', 'Insomnia', 'Menopause', 'Menstruation', 'Pregnancy', 'Sinusitis']"
 Virasana,Hero Pose,"Seated,","['Asthma', 'Digestion', 'High Blood Pressure', 'Menopause']"
 Krounchasana,Heron Pose,"Seated,","['Digestion', 'Flat Feet']"
-,High Lunge,"Standing,","['Digestion', 'Sciatica']"
-,"High Lunge, Crescent Variation","Standing,",['Sciatica']
+Utthita Ashwa Sanchalanasana,High Lunge,"Standing,","['Digestion', 'Sciatica']"
+Alanasana,High Lunge Crescent Variation,"Standing,",['Sciatica']
 Parsvottanasana,Intense Side Stretch Pose,"Forward Bend,Standing,","['Digestion', 'Flat Feet', 'Flexibility']"
 Viparita Karani,Legs-Up-the-Wall Pose,"Restorative,","['Anxiety', 'Asthma', 'Back Pain', 'Calm', 'Depression', 'Digestion', 'Headaches', 'High Blood Pressure', 'Insomnia', 'Menopause', 'Menstruation']"
 Salabhasana,Locust Pose,"Chest Opening,Strengthening,Yoga Backbends","['Back Pain', 'Digestion', 'Fatigue', 'Fitness']"
@@ -55,7 +55,7 @@ Eka Pada Rajakapotasana,One-Legged King Pigeon Pose,"Hip Opening,Yoga Backbends"
 Eka Pada Rajakapotasana II ,One-Legged King Pigeon Pose II,Yoga Backbends,['Flexibility']
 Mayurasana,Peacock Pose,"Arm Balance,",[]
 Kapotasana,Pigeon Pose,Yoga Backbends,[]
-,Plank Pose,"Arm Balance,Core,Strengthening,",['Fitness']
+Vasisthasana,Plank Pose,"Arm Balance,Core,Strengthening,",['Fitness']
 Halasana,Plow Pose,"Inversion,","['Back Pain', 'Fatigue', 'Headaches', 'Infertility', 'Insomnia', 'Menopause', 'Sinusitis', 'Stress']"
 Eka Pada Koundinyanasana I,Pose Dedicated to the Sage Koundinya I,"Arm Balance,Twist,",[]
 Eka Pada Koundinyanasana II,Pose Dedicated to the Sage Koundinya II,"Arm Balance,",[]
@@ -72,7 +72,7 @@ Bhujapidasana,Shoulder-Pressing Pose,"Arm Balance,",[]
 Parsva Bakasana,Side Crane (Crow) Pose,"Arm Balance,",[]
 Vasisthasana,Side Plank Pose,"Arm Balance,Balancing,Core,",[]
 Anantasana,Side-Reclining Leg Lift,"Balancing,Core,",['Flexibility']
-,Sphinx Pose,"Chest Opening,Yoga Backbends","['Asthma', 'Energy', 'Fatigue']"
+Salamba Bhujangasana,Sphinx Pose,"Chest Opening,Yoga Backbends","['Asthma', 'Energy', 'Fatigue']"
 Dandasana,Staff Pose,"Seated,",['Anxiety']
 Uttanasana,Standing Forward Bend,"Forward Bend,","['Anxiety', 'Asthma', 'Calm', 'Depression', 'Fatigue', 'Flexibility', 'High Blood Pressure', 'Infertility', 'Insomnia', 'Menopause', 'Osteoporosis', 'Sinusitis', 'Stress']"
 Ardha Uttanasana ,Standing Half Forward Bend,"Forward Bend,Standing,",['Calm']
