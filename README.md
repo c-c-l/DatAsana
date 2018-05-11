@@ -6,6 +6,9 @@
 2- Study the structure of HTML doc  
 3- Create CSV file with BeautifulSoup4  
 
+### Chart  
+1. Initialize first wheel with benefits  
+
 Data structure is defined by the following rules :  
 * Sanskrit name is first & unique  
 * English name is first & unique  
@@ -20,6 +23,7 @@ Data structure is defined by the following rules :
 ## Sources 
 [Yoga poses and info](https://www.yogajournal.com)  
 [Chord Diagram based](http://bl.ocks.org/farazshuja/6225ffc34c23ade0de169c4d96252bbe)  
+[Text on Arc](http://bl.ocks.org/nbremer/bf6d15082ea81ce69b55)
 
 ## Other  
 Feel free to use the yoga dataset I created :)  
