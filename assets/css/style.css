@@ -1,0 +1,11 @@
+#chart {
+    text-align: center;
+}
+.benefitsArc {
+    fill: white;
+	/* stroke: #AAAAAA; */
+}
+.benefitsText {
+    fill: black;
+    font-size: 10px;
+}
