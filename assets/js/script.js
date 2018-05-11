@@ -108,9 +108,12 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
           .data(pie(data))
           .enter().append("circle")
           .attr('r', "2")
-          .attr("transform", function(d) { return "translate(" + arcIn.centroid(d) + ")"; })
+          // var centroid = arcIn.centroid(d);
+          // .attr("transform", function(d) { return "translate(" + arcIn.centroid(d) + ")"; })
+          .attr("cx", function(d) { var centroid = arcIn.centroid(d); return centroid[0]; })
+          .attr("cy", function(d) { var centroid = arcIn.centroid(d); return centroid[1]; })
           .attr("class", "posesArc")
-          .attr("id", function(d,i) { return "posesArc_"+i; });
+          .attr("id", function(d,i) { return "posesArc_"+i; })
           // .attr("d", arcIn);
 
     // Write benefits
@@ -118,7 +121,8 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
               .data(pie(benefits))
               .enter().append("circle")
               .attr('r', "5")
-              .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+              .attr("cx", function(d) { var centroid = arc.centroid(d); return centroid[0]; })
+              .attr("cy", function(d) { var centroid = arc.centroid(d); return centroid[1]; })
               .attr("class", "benefitArc")
               .attr("id", function(d,i) { return "benefitArc_"+i; });
               // .enter().append('text')
@@ -130,6 +134,24 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
               // .text(function(d, i) {
               //     return benefits[i];
               // })
+    for(var poseIdx = 0; poseIdx < data.length; poseIdx++) {
+        for(var beneIdx = 0; beneIdx < benefits.length; beneIdx++) {
+            if(data[poseIdx].Benefits.includes(benefits[beneIdx])) {
+                var x1 = d3.select(' #posesArc_' + poseIdx).attr('cx');
+                var x2 = d3.select(' #benefitArc_' + beneIdx).attr('cx');
+                var y1 = d3.select(' #posesArc_' + poseIdx).attr('cy');
+                var y2 = d3.select(' #benefitArc_' + beneIdx).attr('cy');
+                svg.append('line').classed(benefits[beneIdx] + '-line', true)
+                   .classed('line', true)
+                   .attr('x1', x1)
+                   .attr('x2', x2)
+                   .attr('y1', y1)
+                   .attr('y2', y2);
+            }
+        }
+    }
+
+
 }); // CSV READING FILE
 
 // ////////////////////////////////////////////////////////////
