@@ -1,11 +1,4 @@
 
-// Create dataset object
-var dataset = null;
-var sanskritList = [];
-var englishList = [];
-var benefitsListUnclean = [];
-var types = [];
-
 // console.log(sanskritList);
 // console.log(types);
 
@@ -29,6 +22,11 @@ height =  Math.min(window.innerWidth, 1000)
 innerRadius = Math.min(width, height) * 0.39,
 outerRadius = innerRadius * 1.1;
 
+// Colors
+colors = ['#F5907A','#F78D89','#F58D98','#EF8FA7','#E592B5','#D898C2','#C69ECC',
+          '#B2A4D3','#9BAAD7','#83B0D6','#6BB5D1','#55B9C9','#45BCBD','#40BDAF',
+          '#47BE9E','#56BE8D','#68BD7B','#7BBB6A','#8FB85B','#A2B44F','#B5AE46',
+          '#C8A843','#D9A145','#E89A4D','#F59259','#FE8C68', '#FE794F']
 
 // Create SVG
 
@@ -124,6 +122,7 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
               .attr("cx", function(d) { var centroid = arc.centroid(d); return centroid[0]; })
               .attr("cy", function(d) { var centroid = arc.centroid(d); return centroid[1]; })
               .attr("class", "benefitArc")
+              .style('fill', function(d,i) { return colors[i]; })
               .attr("id", function(d,i) { return "benefitArc_"+i; });
               // .enter().append('text')
               // .classed('benefitsText', true)
@@ -141,12 +140,14 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
                 var x2 = d3.select(' #benefitArc_' + beneIdx).attr('cx');
                 var y1 = d3.select(' #posesArc_' + poseIdx).attr('cy');
                 var y2 = d3.select(' #benefitArc_' + beneIdx).attr('cy');
-                svg.append('line').classed(benefits[beneIdx] + '-line', true)
+                var className = benefits[beneIdx].toLowerCase();
+                svg.append('line').classed(className + '-line', true)
                    .classed('line', true)
                    .attr('x1', x1)
                    .attr('x2', x2)
                    .attr('y1', y1)
-                   .attr('y2', y2);
+                   .attr('y2', y2)
+                   .style('stroke', colors[beneIdx]);
             }
         }
     }
