@@ -43,8 +43,11 @@ var svg = d3.select("#chart").append("svg")
 var svg = d3.select(' .wrapper');
 
 var outerGroup = svg.append('g').classed('outer', true);
+var innerGroup = svg.append('g').classed('inner', true);
+// innerGroup.attr('transform', 'translate(100,100)');
 
 d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga_data.csv", function(data) {
+    console.log(data);
     var benefitsList= [];
     data.forEach(function(d) {
         benefitsList.push(d.Benefits);
@@ -77,8 +80,12 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
 
     //Creates a function that makes SVG paths in the shape of arcs with the specified inner and outer radius
 	var arc = d3.arc()
-			        .innerRadius(width*0.9/2)
-			        .outerRadius(width*0.9/2 + 30);
+			    .innerRadius(width*0.9/2)
+			    .outerRadius(width*0.9/2 + 30);
+
+    var arcIn = d3.arc()
+                  .innerRadius((width*0.9/2) - 200)
+                  .outerRadius((width*0.9/2 + 30) - 200);
 
     // Define pie
     var angle = 360/benefits.length; // 360 deg / len of benef
@@ -97,18 +104,32 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
        .attr("id", function(d,i) { return "benefitsArc_"+i; })
        .attr("d", arc);
 
+    innerGroup.selectAll(" .posesArc")
+          .data(pie(data))
+          .enter().append("circle")
+          .attr('r', "2")
+          .attr("transform", function(d) { return "translate(" + arcIn.centroid(d) + ")"; })
+          .attr("class", "posesArc")
+          .attr("id", function(d,i) { return "posesArc_"+i; });
+          // .attr("d", arcIn);
+
     // Write benefits
     outerGroup.selectAll(" .benefitsText")
               .data(pie(benefits))
-              .enter().append('text')
-              .classed('benefitsText', true)
-              .attr("x", 0) //Move the text from the start angle of the arc
-              .attr("dy", 18) //Move the text down
-              .append("textPath")
-              .attr("xlink:href",function(d,i){return "#benefitsArc_"+i;})
-              .text(function(d, i) {
-                  return benefits[i];
-              })
+              .enter().append("circle")
+              .attr('r', "5")
+              .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+              .attr("class", "benefitArc")
+              .attr("id", function(d,i) { return "benefitArc_"+i; });
+              // .enter().append('text')
+              // .classed('benefitsText', true)
+              // .attr("x", 0) //Move the text from the start angle of the arc
+              // .attr("dy", 18) //Move the text down
+              // .append("textPath")
+              // .attr("xlink:href",function(d,i){return "#benefitsArc_"+i;})
+              // .text(function(d, i) {
+              //     return benefits[i];
+              // })
 }); // CSV READING FILE
 
 // ////////////////////////////////////////////////////////////
