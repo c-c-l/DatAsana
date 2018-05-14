@@ -24,6 +24,7 @@ Data structure is defined by the following rules :
 4. Add JS function to hide/display lines  
 5. Add JS function to hide/display poses names  
 6. Add JS function to display name in English or Sanskrit  
+7. Add JS function to display poses by type or benefits  
 7. Clean up JS code  
 
 ## Requirements   
