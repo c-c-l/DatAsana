@@ -32,7 +32,7 @@ def html_parser(url, container_html, container_class, parent_html, parent_class,
     soup = BeautifulSoup(html, 'html.parser')
     container = soup.find(container_html, {'class': container_class})
     parents = container.findChildren(parent_html, {'class': parent_class})
-    list = []
+    titles_list = []
     if (data_spec == None) :
         for article in parents:
             titles = article.findChildren(data)
@@ -40,7 +40,7 @@ def html_parser(url, container_html, container_class, parent_html, parent_class,
                 title_text = title.getText()
                 if (title_text.find('Yoga for') != -1) :
                     title_text = title_text.replace('Yoga for ', '')
-                list.append(title_text)
+                titles_list.append(title_text)
     else :
         for article in parents :
             titles = article.findChildren(data, {data_spec : data_val})
@@ -49,8 +49,8 @@ def html_parser(url, container_html, container_class, parent_html, parent_class,
                 if (title_text.find(' Yoga Poses') != -1) :
                     title_text = title_text.replace(' Yoga Poses', ',')
                     title_text.split(',')
-                list.append(title_text)
-    return list
+                titles_list.append(title_text)
+    return titles_list
 
 def get_link(url, container_html, container_class, parent_html, parent_class, data):
     html = urllib.request.urlopen(url, context=ctx).read()
