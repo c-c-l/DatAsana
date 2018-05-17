@@ -37,8 +37,22 @@ var svg = d3.select("#chart").append("svg")
           .classed('wrapper', true)
           .attr("transform", "translate(" + (width/2 + margin.left) + "," + (height/2 + margin.top) + ")");
 // .datum(chord(matrix));
-
 var svg = d3.select(' .wrapper');
+
+svg.append('defs');
+
+var svgBase = svg.select('defs');
+svgBase.append('filter')
+       .attr('id', 'glowy')
+         .append('feGaussianBlur')
+         .attr('stdDeviation', '0.75')
+         .attr('result', 'coloredBlur')
+           .append('feMerge')
+             .append('feMergeNode')
+             .attr('in', 'colorBlur');
+svgBase.select('feMerge')
+       .append('feMergeNode')
+       .attr('in', 'SourceGraphic');
 
 var outerGroup = svg.append('g').classed('outer', true);
 var innerGroup = svg.append('g').classed('inner', true);
@@ -100,6 +114,7 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
        .enter().append("path")
        .attr("class", "benefitsArc")
        .attr("id", function(d,i) { return "benefitsArc_"+i; })
+       // .attr('filter', 'url(#glowy)')
        .attr("d", arc);
 
     innerGroup.selectAll(" .posesArc")
@@ -117,22 +132,25 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
     // Write benefits
     outerGroup.selectAll(" .benefitsText")
               .data(pie(benefits))
-              .enter().append("circle")
-              .attr('r', "5")
+              .enter()
+              // .append('text')
+              // .classed('benefitsText', true)
+              // .attr("x", 40) //Move the text from the start angle of the arc
+              // .attr("dy", 10) //Move the text down
+              // .append("textPath")
+              // .attr("xlink:href",function(d,i){return "#benefitsArc_"+i;})
+              // .style('fill', function(d,i) { return colors[i]; })
+              // .text(function(d, i) {
+              //     return benefits[i];
+              // })
+              .append("circle")
+              .attr('r', "4")
               .attr("cx", function(d) { var centroid = arc.centroid(d); return centroid[0]; })
               .attr("cy", function(d) { var centroid = arc.centroid(d); return centroid[1]; })
               .attr("class", "benefitArc")
               .style('fill', function(d,i) { return colors[i]; })
+              .style('filter', 'url(#glowy)')
               .attr("id", function(d,i) { return "benefitArc_"+i; });
-              // .enter().append('text')
-              // .classed('benefitsText', true)
-              // .attr("x", 0) //Move the text from the start angle of the arc
-              // .attr("dy", 18) //Move the text down
-              // .append("textPath")
-              // .attr("xlink:href",function(d,i){return "#benefitsArc_"+i;})
-              // .text(function(d, i) {
-              //     return benefits[i];
-              // })
     for(var poseIdx = 0; poseIdx < data.length; poseIdx++) {
         for(var beneIdx = 0; beneIdx < benefits.length; beneIdx++) {
             if(data[poseIdx].Benefits.includes(benefits[beneIdx])) {
@@ -154,150 +172,3 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
 
 
 }); // CSV READING FILE
-
-// ////////////////////////////////////////////////////////////
-// ////////////////// Draw outer Arcs /////////////////////////
-// ////////////////////////////////////////////////////////////
-//
-// var outerArcs = svg.selectAll("g.group")
-// .data(function(chords) { return chords.groups; })
-// .enter().append("g")
-// .attr("class", "group")
-// .on("mouseover", fade(.1))
-// .on("mouseout", fade(opacityDefault))
-//
-// // text popups
-// .on("click", mouseoverChord)
-// .on("mouseout", mouseoutChord);
-//
-//
-// ////////////////////////////////////////////////////////////
-// ////////////////////// Append names ////////////////////////
-// ////////////////////////////////////////////////////////////
-//
-// //Append the label names INSIDE outside
-// outerArcs.append("path")
-// .style("fill", function(d) { return colors(d.index); })
-// .attr("id", function(d, i) { return "group" + d.index; })
-// .attr("d", arc);
-//
-// outerArcs.append("text")
-//    .attr("x", 6)
-//    .attr("dx", 60)
-//   .attr("dy", 18)
-// .append("textPath")
-//   .attr("href", function(d) { return "#group" + d.index;})
-//   .text(function(chords, i){return names[i];})
-//   .style("fill", "white");
-//
-// ////////////////////////////////////////////////////////////
-// ////////////////// Draw inner chords ///////////////////////
-// ////////////////////////////////////////////////////////////
-//
-// svg.selectAll("path.chord")
-// .data(function(chords) { return chords; })
-// .enter().append("path")
-// .attr("class", "chord")
-// .style("fill", function(d) { return colors(d.source.index); })
-// .style("opacity", opacityDefault)
-// .attr("d", path);
-//
-//
-// ////////////////////////////////////////////////////////////
-// //////// Draw Super Categories - By Faraz Shuja ////////////
-// ////////////////////////////////////////////////////////////
-//
-// //define grouping with colors
-// var groups = [
-// {sIndex: 0, eIndex: 2, title: 'SuperCategory 1', color: '#c69c6d'},
-// {sIndex: 4, eIndex: 5, title: 'SuperCategory 2', color: '#00a651'}
-// ];
-// var cD = chord(matrix).groups;
-//
-// //draw arcs
-// for(var i=0;i<groups.length;i++) {
-// var __g = groups[i];
-// var arc1 = d3.arc()
-//     .innerRadius(innerRadius*1.11)
-//     .outerRadius(outerRadius*1.1)
-//     .startAngle(cD[__g.sIndex].startAngle)
-//     .endAngle(cD[__g.eIndex].endAngle)
-//
-// svg.append("path").attr("d", arc1).attr('fill', __g.color).attr('id', 'groupId' + i);
-//
-// // Add a text label.
-// var text = svg.append("text")
-//     .attr("x", 200)
-//     .attr("dy", 20);
-//
-// text.append("textPath")
-//     .attr("stroke","#fff")
-//     .attr('fill', '#fff')
-//     .attr("xlink:href","#groupId" + i)
-//     .text(__g.title);
-// }
-//
-//
-//
-//
-// ////////////////////////////////////////////////////////////
-// ////////////////// Extra Functions /////////////////////////
-// ////////////////////////////////////////////////////////////
-//
-// function popup() {
-// return function(d,i) {
-// console.log("love");
-// };
-// }//popup
-//
-// //Returns an event handler for fading a given chord group.
-// function fade(opacity) {
-// return function(d,i) {
-// svg.selectAll("path.chord")
-//   .filter(function(d) { return d.source.index != i && d.target.index != i; })
-// .transition()
-//   .style("opacity", opacity);
-// };
-// }//fade
-//
-// //Highlight hovered over chord
-// function mouseoverChord(d,i) {
-//
-// //Decrease opacity to all
-// svg.selectAll("path.chord")
-// .transition()
-// .style("opacity", 0.1);
-// //Show hovered over chord with full opacity
-// d3.select(this)
-// .transition()
-//   .style("opacity", 1);
-//
-// //Define and show the tooltip over the mouse location
-// $(this).popover({
-// //placement: 'auto top',
-// title: 'test',
-// placement: 'right',
-// container: 'body',
-// animation: false,
-// offset: "20px -100px",
-// followMouse: true,
-// trigger: 'click',
-// html : true,
-// content: function() {
-// return "<p style='font-size: 11px; text-align: center;'><span style='font-weight:900'>"  +
-//      "</span> text <span style='font-weight:900'>"  +
-//      "</span> folgt hier <span style='font-weight:900'>" + "</span> movies </p>"; }
-// });
-// $(this).popover('show');
-// }
-// //Bring all chords back to default opacity
-// function mouseoutChord(d) {
-// //Hide the tooltip
-// $('.popover').each(function() {
-// $(this).remove();
-// })
-// //Set opacity back to default for all
-// svg.selectAll("path.chord")
-// .transition()
-// .style("opacity", opacityDefault);
-// }      //function mouseoutChord
