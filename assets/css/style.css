@@ -4,9 +4,6 @@ html {
 #chart {
     text-align: center;
 }
-.benefitsArc {
-    fill-opacity: 0;
-}
 .benefitArc {
     fill-opacity: 0.85;
 	/* stroke: #AAAAAA; */

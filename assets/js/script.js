@@ -29,7 +29,6 @@ colors = ['#F5907A','#F78D89','#F58D98','#EF8FA7','#E592B5','#D898C2','#C69ECC',
           '#C8A843','#D9A145','#E89A4D','#F59259','#FE8C68', '#FE794F']
 
 // Create SVG
-
 var svg = d3.select("#chart").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
@@ -108,27 +107,18 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
                 .padAngle(.01)
                 .sort(null);
 
-    //Draw the arcs themselves
-    outerGroup.selectAll(" .benefitsArc")
-       .data(pie(benefits))
-       .enter().append("path")
-       .attr("class", "benefitsArc")
-       .attr("id", function(d,i) { return "benefitsArc_"+i; })
-       // .attr('filter', 'url(#glowy)')
-       .attr("d", arc);
-
     innerGroup.selectAll(" .posesArc")
           .data(pie(data))
           .enter().append("circle")
           .attr('r', "2")
-          // var centroid = arcIn.centroid(d);
-          // .attr("transform", function(d) { return "translate(" + arcIn.centroid(d) + ")"; })
           .attr("cx", function(d) { var centroid = arcIn.centroid(d); return centroid[0]; })
           .attr("cy", function(d) { var centroid = arcIn.centroid(d); return centroid[1]; })
           .attr("class", "posesArc")
-          .attr("id", function(d,i) { return "posesArc_"+i; })
-          // .attr("d", arcIn);
+          .attr("id", function(d,i) { return "posesArc-"+i; });
 
+    var tip = d3.select("body").append("div")
+         .attr("class", "tooltip")
+         .style("opacity", 0);
     // Write benefits
     outerGroup.selectAll(" .benefitsText")
               .data(pie(benefits))
@@ -150,14 +140,79 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
               .attr("class", "benefitArc")
               .style('fill', function(d,i) { return colors[i]; })
               .style('filter', 'url(#glowy)')
-              .attr("id", function(d,i) { return "benefitArc_"+i; });
+              .attr("id", function(d,i) { return "benefitArc-"+i; });
+              var circles = svg.selectAll(' .outer circle');
+              var groupCircles = circles._groups[0];
+              for (var circleIdx = 0; circleIdx < groupCircles.length; circleIdx++) {
+                  var id = getIndex(getId(groupCircles[circleIdx]));
+                  var circle = d3.select(groupCircles[circleIdx]);
+                  svg.append("text")
+                     .text(function(d) {
+                         return benefits[circleIdx];
+                     })
+                     .style('fill',function(d) { return colors[circleIdx];} )
+                     .attr("x", function (d) {
+                         var x = circle.attr('cx');
+                         return x - 25;
+                     })
+                     .attr("y", function (d) {
+                         var y = circle.attr('cy');
+                         return y - 10;
+                     });
+                  // d3.select("body").append("div")
+                  //      .attr("class", "tooltip")
+                  //      .style("opacity", .9)
+                  //       .html(function(d) {
+                  //                  return benefits[circleIdx];
+                  //              })
+                  //              .style("left", 200 + "px")
+                  //              .style("top", 40 + "px");
+              }
+     //          .on("mouseover", function(d, i) {
+     //              tip.transition()
+     //              .duration(200)
+     //              .style("opacity", .9);
+     //              tip.html(function(d, i) {
+     //                  return i;
+     //              })
+     //              .style("left", (d3.event.pageX) + "px")
+     //              .style("top", (d3.event.pageY - 28) + "px");
+     //          })
+     // .on("mouseout", function(d) {
+     //   tip.transition()
+     //     .duration(500)
+     //     .style("opacity", 0);
+     //   })
+
+              //Draw the arcs themselves
+              // outerGroup.selectAll(" .benefitsArc")
+              //    .data(pie(benefits))
+              //    .enter().append("path")
+              //    .attr("class", "benefitsArc")
+              //    .attr("id", function(d,i) { return "benefitsArc_"+i; })
+              //    // .attr('filter', 'url(#glowy)')
+              //    .attr("d", arc);
+              //Draw the arcs themselves
+              // outerGroup.selectAll(" .benefitsArc")
+              //    .data(pie(benefits))
+              //    .append('text')
+              //    .classed('benefitsText', true)
+              //    .attr("x", 40) //Move the text from the start angle of the arc
+              //    .attr("dy", 10) //Move the text down
+              //    .append("textPath")
+              //    .attr("xlink:href",function(d,i){return "#benefitsArc_"+i;})
+              //    .style('fill', function(d,i) { return colors[i]; })
+              //    .text(function(d, i) {
+              //        return benefits[i];
+              //    });
+
     for(var poseIdx = 0; poseIdx < data.length; poseIdx++) {
         for(var beneIdx = 0; beneIdx < benefits.length; beneIdx++) {
             if(data[poseIdx].Benefits.includes(benefits[beneIdx])) {
-                var x1 = d3.select(' #posesArc_' + poseIdx).attr('cx');
-                var x2 = d3.select(' #benefitArc_' + beneIdx).attr('cx');
-                var y1 = d3.select(' #posesArc_' + poseIdx).attr('cy');
-                var y2 = d3.select(' #benefitArc_' + beneIdx).attr('cy');
+                var x1 = d3.select(' #posesArc-' + poseIdx).attr('cx');
+                var x2 = d3.select(' #benefitArc-' + beneIdx).attr('cx');
+                var y1 = d3.select(' #posesArc-' + poseIdx).attr('cy');
+                var y2 = d3.select(' #benefitArc-' + beneIdx).attr('cy');
                 var className = benefits[beneIdx].toLowerCase();
                 svg.append('line').classed(className + '-line', true)
                    .classed('line', true)
@@ -169,6 +224,23 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
             }
         }
     }
+    // Get index from id name
+    function getIndex(id) {
+        var idArr = id.split('-');
+        return idArr[1];
+    }
+
+    // Get id from element
+    function getId(element) {
+        return element.id;
+    }
+
+    // var circles = svg.selectAll(' .outer circle');
+    // var groupCircles = circles._groups[0];
+    // for (var circleIdx = 0; circleIdx < groupCircles.length; circleIdx++) {
+    //     var id = getIndex(getId(groupCircles[circleIdx]));
+    //     console.log(id)
+    // }
 
 
 }); // CSV READING FILE
