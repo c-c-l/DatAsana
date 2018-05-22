@@ -19,13 +19,11 @@ Data structure is defined by the following rules :
 
 ## TODO  
 1. Clean up Python code  
-2. Make pipfile (see Issue #1)  
-3. Display benefits names by default  
-4. Add JS function to hide/display lines  
-5. Add JS function to hide/display poses names  
-6. Add JS function to display name in English or Sanskrit  
-7. Add JS function to display poses by type or benefits  
-7. Clean up JS code  
+2. Add JS function to hide/display poses names  
+3. Add JS function to display name in English or Sanskrit  
+4. Add JS function to display poses by type or benefits  
+5. Delete duplicate benefits  
+6. Clean up JS code  
 
 ## Requirements   
 ### Python script to parse data  
