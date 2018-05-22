@@ -123,16 +123,6 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
     outerGroup.selectAll(" .benefitsText")
               .data(pie(benefits))
               .enter()
-              // .append('text')
-              // .classed('benefitsText', true)
-              // .attr("x", 40) //Move the text from the start angle of the arc
-              // .attr("dy", 10) //Move the text down
-              // .append("textPath")
-              // .attr("xlink:href",function(d,i){return "#benefitsArc_"+i;})
-              // .style('fill', function(d,i) { return colors[i]; })
-              // .text(function(d, i) {
-              //     return benefits[i];
-              // })
               .append("circle")
               .attr('r', "4")
               .attr("cx", function(d) { var centroid = arc.centroid(d); return centroid[0]; })
@@ -159,16 +149,7 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
                          var y = circle.attr('cy');
                          return y - 10;
                      });
-                  // d3.select("body").append("div")
-                  //      .attr("class", "tooltip")
-                  //      .style("opacity", .9)
-                  //       .html(function(d) {
-                  //                  return benefits[circleIdx];
-                  //              })
-                  //              .style("left", 200 + "px")
-                  //              .style("top", 40 + "px");
-              }
-     //          .on("mouseover", function(d, i) {
+              };
      //              tip.transition()
      //              .duration(200)
      //              .style("opacity", .9);
@@ -214,6 +195,7 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
                 var y1 = d3.select(' #posesArc-' + poseIdx).attr('cy');
                 var y2 = d3.select(' #benefitArc-' + beneIdx).attr('cy');
                 var className = benefits[beneIdx].toLowerCase();
+                className = className.split(' ').join('');
                 svg.append('line').classed(className + '-line', true)
                    .classed('line', true)
                    .attr('x1', x1)
@@ -223,6 +205,23 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
                    .style('stroke', colors[beneIdx]);
             }
         }
+    }
+    svg.selectAll('circle')
+              .on("mouseover", function(d, i) {
+                  console.log('mouseover' + i);
+                  var benefit = d.data;
+                  benefit = benefit.toLowerCase();
+                  benefit = benefit.split(' ').join('');
+                  console.log(benefit);
+                  svg.selectAll('line').style('stroke-opacity', 0);
+                  displayLines(benefit);
+              })
+              .on('mouseout', function() {
+                  svg.selectAll('line').style('stroke-opacity', 0.45);
+              });
+    // Display lines corresponding to benefit
+    function displayLines(benefit) {
+        svg.selectAll('line.' + benefit + '-line').style('stroke-opacity', 0.45);
     }
     // Get index from id name
     function getIndex(id) {
