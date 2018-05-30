@@ -23,7 +23,8 @@ Data structure is defined by the following rules :
 3. Add JS function to display name in English or Sanskrit  
 4. Add JS function to display poses by type or benefits  
 5. Delete duplicate benefits  
-6. Clean up JS code  
+6. See if there is a way to delete for loops in JS using D3 Joins
+7. Clean up JS code  
 
 ## Requirements   
 ### Python script to parse data  
