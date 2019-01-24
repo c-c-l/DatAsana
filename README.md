@@ -1,5 +1,7 @@
 # DatAsana  
 
+Status : his project is still a WIP one since I am focusing on Data Analysis/Viz courses on Coursera right now :)
+
 ## Flow  
 ### Collecting data  
 1- Get data from a website (see Sources)  
@@ -25,6 +27,7 @@ Data structure is defined by the following rules :
 5. Delete duplicate benefits  
 6. See if there is a way to delete for loops in JS using D3 Joins
 7. Clean up JS code  
+8. Remove duplicates in data (pandas)
 
 ## Requirements   
 ### Python script to parse data  
