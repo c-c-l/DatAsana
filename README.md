@@ -1,6 +1,6 @@
 # DatAsana  
 
-Status : his project is still a WIP one since I am focusing on Data Analysis/Viz courses on Coursera right now :)
+Status : this project is still a WIP one since I am focusing on Data Analysis/Viz courses on Coursera right now :)
 
 ## Flow  
 ### Collecting data  
