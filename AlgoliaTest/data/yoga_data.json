@@ -1,0 +1,554 @@
+[
+  {
+    "Sanskrit": "Bharadvajasana I",
+    "English": "Bharadvaja’s Twist",
+    "Type": "Hip Opening,Seated,Twist",
+    "Benefits": ["Carpal Tunnel Syndrome"]
+  },
+  {
+    "Sanskrit": "Padangusthasana",
+    "English": "Big Toe Pose",
+    "Type": "Forward Bend,Standing",
+    "Benefits": ["Anxiety", "Digestion", "Fatigue", "Flexibility", "Headaches", "Insomnia", "Menopause", "Osteoporosis", "Stress"]
+  },
+  {
+    "Sanskrit": "Paripurna Navasana",
+    "English": "Boat Pose",
+    "Type": "Core,Seated,Strengthening",
+    "Benefits": ["Digestion", "Fitness", "Stress", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Baddha Konasana",
+    "English": "Bound Angle Pose",
+    "Type": "Forward Bend,Hip Opening,Seated",
+    "Benefits": ["Anxiety", "Asthma", "Depression", "Fatigue", "Flat Feet", "Flexibility", "High Blood Pressure", "Infertility", "Menopause", "Menstruation", "Pregnancy", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Dhanurasana",
+    "English": "Bow Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Digestion", "Fatigue", "Menstruation"]
+  },
+  {
+    "Sanskrit": "Setu Bandha Sarvangasana",
+    "English": "Bridge Pose",
+    "Type": "Yoga Backbends",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Depression", "Digestion", "Energy", "Headaches", "High Blood Pressure", "Insomnia", "Menopause", "Menstruation", "Osteoporosis", "Sinusitis"]
+  },
+  {
+    "Sanskrit": "Ustrasana",
+    "English": "Camel Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Energy", "Fatigue", "Menstruation"]
+  },
+  {
+    "Sanskrit": "Marjaryasana",
+    "English": "Cat Pose",
+    "Type": "Core",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Insomnia", "Neck Pain"]
+  },
+  {
+    "Sanskrit": "Utkatasana",
+    "English": "Chair Pose",
+    "Type": "Core,Standing,Strengthening",
+    "Benefits": ["Flat Feet"]
+  },
+  {
+    "Sanskrit": "Balasana",
+    "English": "Child’s Pose",
+    "Type": "Forward Bend,Hip Opening,Restorative",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Bhujangasana",
+    "English": "Cobra Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Asthma", "Digestion", "Energy", "Fatigue", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Savasana",
+    "English": "Corpse Pose",
+    "Type": "Restorative",
+    "Benefits": ["Calm", "Depression", "Fatigue", "Headaches", "High Blood Pressure", "Insomnia", "Neck Pain", "Stress"]
+  },
+  {
+    "Sanskrit": "Gomukhasana",
+    "English": "Cow Face Pose",
+    "Type": "Hip Opening,Seated",
+    "Benefits": ["Flexibility"]
+  },
+  {
+    "Sanskrit": "Bitilasana",
+    "English": "Cow Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Insomnia", "Neck Pain"]
+  },
+  {
+    "Sanskrit": "Bakasana",
+    "English": "Crane (Crow) Pose",
+    "Type": "Arm Balance,Core",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Makara Adho Mukha Svanasana",
+    "English": "Dolphin Plank Pose",
+    "Type": "Arm Balance,Core,Strengthening",
+    "Benefits": ["Depression", "Fitness", "Osteoporosis", "Stress"]
+  },
+  {
+    "Sanskrit": "Ardha Pincha Mayurasana",
+    "English": "Dolphin Pose",
+    "Type": "Core,Standing,Strengthening",
+    "Benefits": ["Asthma", "Back Pain", "Depression", "Fatigue", "Fitness", "Flat Feet", "Headaches", "High Blood Pressure", "Insomnia", "Menopause", "Menstruation", "Osteoporosis", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Adho Mukha Svanasana",
+    "English": "Downward-Facing Dog",
+    "Type": "Forward Bend,Standing,Strengthening",
+    "Benefits": ["Asthma", "Back Pain", "Digestion", "Energy", "Fatigue", "Flat Feet", "Flexibility", "Headaches", "High Blood Pressure", "Insomnia", "Menopause", "Menstruation", "Osteoporosis", "Sciatica", "Sinusitis"]
+  },
+  {
+    "Sanskrit": "Garudasana",
+    "English": "Eagle Pose",
+    "Type": "Balancing,Hip Opening,Standing",
+    "Benefits": ["Asthma", "Back Pain", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Sukhasana",
+    "English": "Easy Pose",
+    "Type": "Hip Opening,Seated",
+    "Benefits": ["Anxiety", "Asthma", "Calm", "Depression", "Insomnia", "Pregnancy", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Astavakrasana",
+    "English": "Eight-Angle Pose",
+    "Type": "Arm Balance",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Utthita Hasta Padangustasana",
+    "English": "Extended Hand-To-Big-Toe Pose",
+    "Type": "Balancing,Hip Opening,Standing",
+    "Benefits": ["Osteoporosis"]
+  },
+  {
+    "Sanskrit": "Uttana Shishosana",
+    "English": "Extended Puppy Pose",
+    "Type": "Forward Bend",
+    "Benefits": ["Anxiety", "Depression", "Flexibility", "Headaches", "Insomnia", "Neck Pain"]
+  },
+  {
+    "Sanskrit": "Utthita Parsvakonasana",
+    "English": "Extended Side Angle Pose",
+    "Type": "Standing,Strengthening",
+    "Benefits": ["Back Pain", "Digestion", "Fitness", "Infertility", "Menstruation", "Osteoporosis", "Sciatica", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Utthita Trikonasana",
+    "English": "Extended Triangle Pose",
+    "Type": "Standing,Strengthening",
+    "Benefits": ["Anxiety", "Back Pain", "Digestion", "Flat Feet", "Flexibility", "Infertility", "Menopause", "Neck Pain", "Osteoporosis", "Pregnancy", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Pincha Mayurasana",
+    "English": "Feathered Peacock Pose",
+    "Type": "Inversion,Strengthening",
+    "Benefits": ["Depression", "Stress"]
+  },
+  {
+    "Sanskrit": "Agnistambhasana",
+    "English": "Fire Log Pose",
+    "Type": "Hip Opening,Seated",
+    "Benefits": ["Back Pain", "Depression", "Flexibility", "Headaches", "Insomnia", "Sciatica", "Stress"]
+  },
+  {
+    "Sanskrit": "Tittibhasana",
+    "English": "Firefly Pose",
+    "Type": "Arm Balance",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Matsyasana",
+    "English": "Fish Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Digestion", "Fatigue", "Menstruation"]
+  },
+  {
+    "Sanskrit": "Chaturanga Dandasana",
+    "English": "Four-Limbed Staff Pose",
+    "Type": "Arm Balance,Core,Strengthening",
+    "Benefits": ["Fitness", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Malasana",
+    "English": "Garland Pose",
+    "Type": "Standing",
+    "Benefits": ["Flexibility"]
+  },
+  {
+    "Sanskrit": "Parighasana",
+    "English": "Gate Pose",
+    "Type": "Standing",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Ardha Bhekasana",
+    "English": "Half Frog Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Flat Feet", "Flexibility"]
+  },
+  {
+    "Sanskrit": "Ardha Matsyendrasana",
+    "English": "Half Lord of the Fishes Pose",
+    "Type": "Hip Opening,Seated,Twist",
+    "Benefits": ["Asthma", "Back Pain", "Digestion", "Energy", "Fatigue", "Infertility", "Menstruation", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Ardha Chandrasana",
+    "English": "Half Moon Pose",
+    "Type": "Balancing,Standing",
+    "Benefits": ["Anxiety", "Back Pain", "Digestion", "Fatigue", "Menstruation", "Osteoporosis", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Adho Mukha Vrksasana",
+    "English": "Handstand",
+    "Type": "Balancing,Inversion,Strengthening",
+    "Benefits": ["Depression", "Stress"]
+  },
+  {
+    "Sanskrit": "Ananda Balasana",
+    "English": "Happy Baby Pose",
+    "Type": "Core",
+    "Benefits": ["Fatigue", "Stress"]
+  },
+  {
+    "Sanskrit": "Janu Sirsasana",
+    "English": "Head-to-Knee Forward Bend",
+    "Type": "Forward Bend,Seated",
+    "Benefits": ["Anxiety", "Calm", "Digestion", "Fatigue", "Flexibility", "Headaches", "High Blood Pressure", "Insomnia", "Menopause", "Menstruation", "Pregnancy", "Sinusitis"]
+  },
+  {
+    "Sanskrit": "Virasana",
+    "English": "Hero Pose",
+    "Type": "Seated",
+    "Benefits": ["Asthma", "Digestion", "High Blood Pressure", "Menopause"]
+  },
+  {
+    "Sanskrit": "Krounchasana",
+    "English": "Heron Pose",
+    "Type": "Seated",
+    "Benefits": ["Digestion", "Flat Feet"]
+  },
+  {
+    "Sanskrit": "Utthita Ashwa Sanchalanasana",
+    "English": "High Lunge",
+    "Type": "Standing",
+    "Benefits": ["Digestion", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Alanasana",
+    "English": "High Lunge Crescent Variation",
+    "Type": "Standing",
+    "Benefits": ["Sciatica"]
+  },
+  {
+    "Sanskrit": "Parsvottanasana",
+    "English": "Intense Side Stretch Pose",
+    "Type": "Forward Bend,Standing",
+    "Benefits": ["Digestion", "Flat Feet", "Flexibility"]
+  },
+  {
+    "Sanskrit": "Viparita Karani",
+    "English": "Legs-Up-the-Wall Pose",
+    "Type": "Restorative",
+    "Benefits": ["Anxiety", "Asthma", "Back Pain", "Calm", "Depression", "Digestion", "Headaches", "High Blood Pressure", "Insomnia", "Menopause", "Menstruation"]
+  },
+  {
+    "Sanskrit": "Salabhasana",
+    "English": "Locust Pose",
+    "Type": "Chest Opening,Strengthening,Yoga Backbends",
+    "Benefits": ["Back Pain", "Digestion", "Fatigue", "Fitness"]
+  },
+  {
+    "Sanskrit": "Natarajasana",
+    "English": "Lord of the Dance Pose",
+    "Type": "Balancing,Chest Opening,Standing,Yoga Backbends",
+    "Benefits": ["Energy", "Flexibility"]
+  },
+  {
+    "Sanskrit": "Padmasana",
+    "English": "Lotus Pose",
+    "Type": "Seated",
+    "Benefits": ["Menstruation", "Pregnancy", "Sciatica", "Stress"]
+  },
+  {
+    "Sanskrit": "Anjaneyasana",
+    "English": "Low Lunge",
+    "Type": "Standing",
+    "Benefits": ["Sciatica"]
+  },
+  {
+    "Sanskrit": "Marichyasana III",
+    "English": "Marichi’s Pose",
+    "Type": "Hip Opening,Seated,Twist",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Hanumanasana",
+    "English": "Monkey Pose",
+    "Type": "Seated",
+    "Benefits": ["Sciatica"]
+  },
+  {
+    "Sanskrit": "Tadasana",
+    "English": "Mountain Pose",
+    "Type": "Standing",
+    "Benefits": ["Flat Feet", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Pasasana",
+    "English": "Noose Pose",
+    "Type": "Binding,Hip Opening,Strengthening,Twist",
+    "Benefits": ["Asthma", "Digestion", "Flexibility", "Menstruation", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Eka Pada Rajakapotasana",
+    "English": "One-Legged King Pigeon Pose",
+    "Type": "Hip Opening,Yoga Backbends",
+    "Benefits": ["Energy", "Flexibility"]
+  },
+  {
+    "Sanskrit": "Eka Pada Rajakapotasana II",
+    "English": "One-Legged King Pigeon Pose II",
+    "Type": "Yoga Backbends",
+    "Benefits": ["Flexibility"]
+  },
+  {
+    "Sanskrit": "Mayurasana",
+    "English": "Peacock Pose",
+    "Type": "Arm Balance",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Kapotasana",
+    "English": "Pigeon Pose",
+    "Type": "Yoga Backbends",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Vasisthasana",
+    "English": "Plank Pose",
+    "Type": "Arm Balance,Core,Strengthening",
+    "Benefits": ["Fitness"]
+  },
+  {
+    "Sanskrit": "Halasana",
+    "English": "Plow Pose",
+    "Type": "Inversion",
+    "Benefits": ["Back Pain", "Fatigue", "Headaches", "Infertility", "Insomnia", "Menopause", "Sinusitis", "Stress"]
+  },
+  {
+    "Sanskrit": "Eka Pada Koundinyanasana I",
+    "English": "Pose Dedicated to the Sage Koundinya I",
+    "Type": "Arm Balance,Twist",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Eka Pada Koundinyanasana II",
+    "English": "Pose Dedicated to the Sage Koundinya II",
+    "Type": "Arm Balance",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Marichyasana I",
+    "English": "Pose Dedicated to the Sage Marichi I",
+    "Type": "Binding,Forward Bend,Hip Opening,Seated",
+    "Benefits": ["Digestion", "Flexibility", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Supta Baddha Konasana",
+    "English": "Reclining Bound Angle Pose",
+    "Type": "Hip Opening,Restorative",
+    "Benefits": ["Calm", "Depression", "Menopause", "Menstruation"]
+  },
+  {
+    "Sanskrit": "Supta Padangusthasana",
+    "English": "Reclining Hand-to-Big-Toe Pose",
+    "Type": "Restorative",
+    "Benefits": ["Back Pain", "Calm", "Digestion", "Flat Feet", "Flexibility", "High Blood Pressure", "Infertility", "Menstruation", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Supta Virasana",
+    "English": "Reclining Hero Pose",
+    "Type": "Restorative",
+    "Benefits": ["Asthma", "Calm", "Digestion", "Flat Feet", "Flexibility", "Headaches", "High Blood Pressure", "Insomnia", "Menstruation", "Sciatica", "Sinusitis"]
+  },
+  {
+    "Sanskrit": "Parivrtta Janu Sirsasana",
+    "English": "Revolved Head-to-Knee Pose",
+    "Type": "Seated,Twist",
+    "Benefits": ["Anxiety", "Back Pain", "Fatigue", "Headaches", "Insomnia"]
+  },
+  {
+    "Sanskrit": "Parivrtta Parsvakonasana",
+    "English": "Revolved Side Angle Pose",
+    "Type": "Standing,Strengthening,Twist",
+    "Benefits": ["Back Pain", "Fitness", "Infertility", "Osteoporosis", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Parivrtta Trikonasana",
+    "English": "Revolved Triangle Pose",
+    "Type": "Standing,Strengthening,Twist",
+    "Benefits": ["Asthma", "Back Pain", "Fitness", "Flexibility", "Sciatica"]
+  },
+  {
+    "Sanskrit": "Tolasana",
+    "English": "Scale Pose",
+    "Type": "Arm Balance,Core",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Paschimottanasana",
+    "English": "Seated Forward Bend",
+    "Type": "Forward Bend,Seated",
+    "Benefits": ["Anxiety", "Calm", "Depression", "Fatigue", "Flexibility", "Headaches", "High Blood Pressure", "Infertility", "Insomnia", "Menopause", "Menstruation", "Sinusitis", "Stress", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Bhujapidasana",
+    "English": "Shoulder-Pressing Pose",
+    "Type": "Arm Balance",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Parsva Bakasana",
+    "English": "Side Crane (Crow) Pose",
+    "Type": "Arm Balance",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Vasisthasana",
+    "English": "Side Plank Pose",
+    "Type": "Arm Balance,Balancing,Core",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Anantasana",
+    "English": "Side-Reclining Leg Lift",
+    "Type": "Balancing,Core",
+    "Benefits": ["Flexibility"]
+  },
+  {
+    "Sanskrit": "Salamba Bhujangasana",
+    "English": "Sphinx Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Asthma", "Energy", "Fatigue"]
+  },
+  {
+    "Sanskrit": "Dandasana",
+    "English": "Staff Pose",
+    "Type": "Seated",
+    "Benefits": ["Anxiety"]
+  },
+  {
+    "Sanskrit": "Uttanasana",
+    "English": "Standing Forward Bend",
+    "Type": "Forward Bend",
+    "Benefits": ["Anxiety", "Asthma", "Calm", "Depression", "Fatigue", "Flexibility", "High Blood Pressure", "Infertility", "Insomnia", "Menopause", "Osteoporosis", "Sinusitis", "Stress"]
+  },
+  {
+    "Sanskrit": "Ardha Uttanasana",
+    "English": "Standing Half Forward Bend",
+    "Type": "Forward Bend,Standing",
+    "Benefits": ["Calm"]
+  },
+  {
+    "Sanskrit": "Urdhva Prasarita Eka Padasana",
+    "English": "Standing Split",
+    "Type": "Forward Bend,Standing",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Salamba Sirsasana",
+    "English": "Supported Headstand",
+    "Type": "Balancing,Inversion",
+    "Benefits": ["Asthma", "Depression", "Infertility", "Insomnia", "Menopause", "Sinusitis", "Stress"]
+  },
+  {
+    "Sanskrit": "Salamba Sarvangasana",
+    "English": "Supported Shoulderstand",
+    "Type": "Balancing,Inversion",
+    "Benefits": ["Asthma", "Depression", "Fatigue", "Infertility", "Insomnia", "Menopause", "Sinusitis", "Stress"]
+  },
+  {
+    "Sanskrit": "Vrksasana",
+    "English": "Tree Pose",
+    "Type": "Balancing,Standing",
+    "Benefits": ["Flat Feet"]
+  },
+  {
+    "Sanskrit": "Urdhva Dhanurasana",
+    "English": "Upward Bow (Wheel) Pose",
+    "Type": "Chest Opening,Strengthening,Yoga Backbends",
+    "Benefits": ["Asthma", "Depression", "Energy", "Fitness", "Infertility", "Osteoporosis"]
+  },
+  {
+    "Sanskrit": "Dwi Pada Viparita Dandasana",
+    "English": "Upward Facing Two-Foot Staff Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Purvottanasana",
+    "English": "Upward Plank Pose",
+    "Type": "Strengthening",
+    "Benefits": ["Fatigue", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Urdhva Hastasana",
+    "English": "Upward Salute",
+    "Type": "Standing",
+    "Benefits": ["Anxiety", "Fatigue"]
+  },
+  {
+    "Sanskrit": "Urdhva Mukha Svanasana",
+    "English": "Upward-Facing Dog Pose",
+    "Type": "Chest Opening,Yoga Backbends",
+    "Benefits": ["Depression", "Energy", "Fitness", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Virabhadrasana I",
+    "English": "Warrior I Pose",
+    "Type": "Standing,Strengthening",
+    "Benefits": ["Fitness"]
+  },
+  {
+    "Sanskrit": "Virabhadrasana II",
+    "English": "Warrior II Pose",
+    "Type": "Standing,Strengthening",
+    "Benefits": ["Carpal Tunnel Syndrome", "Fitness", "Flat Feet", "Infertility", "Osteoporosis", "Pregnancy", "Weight Loss"]
+  },
+  {
+    "Sanskrit": "Virabhadrasana III",
+    "English": "Warrior III Pose",
+    "Type": "Balancing,Standing,Strengthening",
+    "Benefits": ["Fitness"]
+  },
+  {
+    "Sanskrit": "Upavistha Konasana",
+    "English": "Wide-Angle Seated Forward Bend",
+    "Type": "Forward Bend,Hip Opening,Seated",
+    "Benefits": []
+  },
+  {
+    "Sanskrit": "Prasarita Padottanasana",
+    "English": "Wide-Legged Forward Bend",
+    "Type": "Forward Bend,Hip Opening,Standing,Strengthening",
+    "Benefits": ["Calm", "Depression", "Headaches"]
+  },
+  {
+    "Sanskrit": "Camatkarasana",
+    "English": "Wild Thing",
+    "Type": "Arm Balance,Chest Opening",
+    "Benefits": ["Depression"]
+  }
+]
