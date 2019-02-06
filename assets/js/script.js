@@ -142,7 +142,7 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
                  .text(function(d) {
                    return poses[circleIdx];
                  })
-                 .style('fill', '#fff')
+                 .style('fill', 'none')
                  .attr("x", function (d) {
                      var x = circle.attr('cx');
                      return x;
@@ -277,12 +277,11 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
     }
     svg.selectAll('circle')
               .on("mouseover", function(d, i) {
-                  // console.log('mouseover' + i);
                   var benefit = d.data;
                   benefit = benefit.toLowerCase();
                   benefit = benefit.split(' ').join('');
-                  // console.log(benefit);
                   svg.selectAll('line').style('stroke-opacity', 0);
+                  svg.selectAll(' .posesText').style('fill-opacity', '0');
                   displayLines(benefit);
                   displaySanskrit(benefit);
               })
