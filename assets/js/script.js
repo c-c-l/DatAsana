@@ -19,7 +19,7 @@ var svg = d3.select("#chart").append("svg")
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
           .classed('wrapper', true)
-          .attr("transform", "translate(" + (width/2 + margin.left) + "," + (height/2 + margin.top) + ")");7
+          .attr("transform", "translate(" + (width/2 + margin.left) + "," + (height/2 + margin.top) + ")");
 
 // Init SVG var
 var svg = d3.select(' .wrapper');
