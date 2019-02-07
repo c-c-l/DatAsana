@@ -45,7 +45,6 @@ var innerGroup = svg.append('g').classed('inner', true);
 
 // Data (raw from github)
 d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga_data.csv", function(data) {
-    // console.log(data);
     // Benefits List
     var benefitsList= [];
     data.forEach(function(d) {
@@ -199,7 +198,6 @@ d3.csv("https://raw.githubusercontent.com/c-c-l/DatAsana/master/DataCollect/yoga
       var benefit = d.data;
       benefit = benefit.toLowerCase();
       benefit = benefit.split(' ').join('');
-      console.log(benefit);
       svg.selectAll('line').style('stroke-opacity', 0);
       svg.selectAll(' .posesText').style('fill-opacity', '0');
       svg.selectAll('line.' + benefit + '-line').style('stroke-opacity', 0.45);
