@@ -21,13 +21,10 @@ Data structure is defined by the following rules :
 
 ## TODO  
 1. Clean up Python code  
-2. Add JS function to hide/display poses names  
-3. Add JS function to display name in English or Sanskrit  
-4. Add JS function to display poses by type or benefits  
-5. Delete duplicate benefits  
-6. See if there is a way to delete for loops in JS using D3 Joins
-7. Clean up JS code  
-8. Remove duplicates in data (pandas)
+2. Add JS function to display name in English or Sanskrit  
+3. Add JS function to display poses by type or benefits  
+4. See if there is a way to delete for loops in JS using D3 Joins
+5. Fix how the text is displaying for poses (following path is the best option?)
 
 ## Requirements   
 ### Python script to parse data  
