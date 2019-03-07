@@ -1,6 +1,6 @@
 # DatAsana  
 
-Status : WIP fixing stuff :) (+ I use this project when I need a dataset :D)
+Status : WIP fixing stuff :) (+ I use this project when I need a dataset :D)  
 
 ## Flow  
 ### Collecting data  
@@ -23,7 +23,7 @@ Data structure is defined by the following rules :
 1. Clean up Python code  
 2. Add JS function to display name in English or Sanskrit  
 3. Add JS function to display poses by type or benefits  
-4. See if there is a way to delete for loops in JS using D3 Joins
+4. Delete all for loops and replace with .data() .enter() because it is neat  
 5. Fix how the text is displaying for poses (following path is the best option?)
 
 ## Requirements   
