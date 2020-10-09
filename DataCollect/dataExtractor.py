@@ -1,6 +1,6 @@
 # Python 3
 # Creates a csv file parsing data need from the web
-# Author : Cecilia Macioszek (GitHub : c-c-l, Instagram : this_is_ccl)
+# Author : Ccl (GitHub : c-c-l)
 
 import csv
 import urllib.request, urllib.parse, urllib.error
